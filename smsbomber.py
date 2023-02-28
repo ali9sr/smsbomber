@@ -57,6 +57,8 @@ def main():
             print('error!')
 
         for i in range(user_input_loop):
+            if user_input_loop == 0:
+                sys.exit()
             Thread(target=bomberstor.digikala_bomber(number)).start()
             Thread(target=bomberstor.divar_bomber(number)).start() 
             Thread(target=bomberstor.sheypoor_bomber(number)).start()
