@@ -16,7 +16,7 @@ def main():
             os.system('clear')
             menu.banner()
             number = input(color.GREEN+'[+] Enter Victim Number(without 0) -> ')
-            user_input_loop = int(input("[+] How many times you want to send messages? (1 times = 26sms) -> "))
+            user_input_loop = int(input(color.WHITE+"[+] How many times you want to send messages? (1 times = 26sms) -> "))
         except:
             print('error!')
 
@@ -51,8 +51,8 @@ def main():
         try:
             os.system('clear')
             menu.banner()
-            number = input('[+] Enter Victim Number(without 0) -> ')
-            user_input_loop = int(input("[+] How many times you want to send messages? (1 times = 26sms) -> "))
+            number = input(color.GREEN+'[+] Enter Victim Number(without 0) -> ')
+            user_input_loop = int(input(color.WHITE+"[+] How many times you want to send messages? (1 times = 26sms) -> "))
         except:
             print('error!')
 
@@ -92,7 +92,7 @@ def main():
         print('Error!')
         sys.exit() 
 
-    print('good luck!')
+    print('Good Luck!')
     sleep(2)
 
 if __name__ == '__main__':
