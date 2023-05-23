@@ -22,4 +22,4 @@ def pindo_bomber(number):
     except:
         print('pindo error!')
 
-pindo_bomber('9012337916')
+pindo_bomber("")
