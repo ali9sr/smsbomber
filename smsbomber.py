@@ -7,6 +7,8 @@ from colorama import Fore as color
 import sys,os
 
 def main():
+    os.system('clear')
+    print('\n')
     menu.banner()
     menu.menu_res()
     print('\n')
