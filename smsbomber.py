@@ -7,6 +7,7 @@ from colorama import Fore as color
 import sys,os
 
 def main():
+    times = '37'
     os.system('clear')
     print('\n')
     menu.banner()
@@ -20,7 +21,7 @@ def main():
             os.system('clear')
             menu.banner()
             number = input(color.GREEN+'[+] Enter Victim Number(without 0) -> ')
-            user_input_loop2 = input(color.WHITE+"[+] How many times you want to send messages? (default == 1 sms) (1 times = 30sms) -> ")
+            user_input_loop2 = input(color.WHITE+f"[+] How many times you want to send messages? (default == 1 sms) (1 times = {times}sms) -> ")
             
             if user_input_loop2 == '' or user_input_loop2.isdigit() == False:
                 user_input_loop = 0
@@ -28,7 +29,7 @@ def main():
                 user_input_loop = int(user_input_loop2)
 
             if user_input_loop == 0:
-                    Thread(target=bombers.sahmeto_bomber(number)).start()
+                Thread(target=bombers.divar_bomber(number)).start()
 
         except:
             print('error!')
@@ -64,13 +65,25 @@ def main():
             Thread(target=bombers.sahmio_bomber(number)).start()
             Thread(target=bombers.ponisha_bomber(number)).start()
             Thread(target=bombers.pindo_bomber(number)).start()
+            Thread(target=bombers.karlancer_bomber(number)).start()
+            Thread(target=bombers.alibaba_bomber(number)).start()
+            Thread(target=bombers.namava_bomber(number)).start()
+            Thread(target=bombers.gapfilm_bomber(number)).start()
+            Thread(target=bombers.tebinja_bomber(number)).start()
+            Thread(target=bombers.tamland_bomber(number)).start()
+            Thread(target=bombers.delino_bomber(number)).start()
 
     elif (choice == 2): #with tor
+        print(color.RED+'This option is under repair!')
+        sleep(1)
+        os.system('clear')
+        sleep(2)
+        main()
         try:
             os.system('clear')
             menu.banner()
             number = input(color.GREEN+'[+] Enter Victim Number(without 0) -> ')
-            user_input_loop2 = input(color.WHITE+"[+] How many times you want to send messages? (defult == 1 sms) (1 times = 30sms) -> ")
+            user_input_loop2 = input(color.WHITE+f"[+] How many times you want to send messages? (defult == 1 sms) (1 times = {times}sms) -> ")
             
             if user_input_loop2 == '' or user_input_loop2.isdigit() == False:
                 user_input_loop = 0
@@ -112,17 +125,29 @@ def main():
             Thread(target=bomberstor.sahmeto_bomber(number)).start()
             Thread(target=bomberstor.sahmio_bomber(number)).start()
             Thread(target=bomberstor.ponisha_bomber(number)).start()
-            Thread(target=bombers.pindo_bomber(number)).start()
+            Thread(target=bomberstor.pindo_bomber(number)).start()
+            Thread(target=bomberstor.karlancer_bomber(number)).start()
+            Thread(target=bomberstor.alibaba_bomber(number)).start()
+            Thread(target=bomberstor.namava_bomber(number)).start()
+            Thread(target=bomberstor.gap_bomber(number)).start()
+            Thread(target=bomberstor.tebinja_bomber(number)).start()
+            Thread(target=bomberstor.tamland_bomber(number)).start()
+            Thread(target=bomberstor.delino_bomber(number)).start()
 
     elif (choice == 0):
         os.system('clear')
         sys.exit()
+    elif (choice == 10):
+        os.system('pip install requests && pip install colorama')
     else:
         print('Error!')
         sys.exit()
     
-    repeat = 'n'
+    print('\n')
     repeat = input(color.LIGHTYELLOW_EX+'Do you want to continue? (y/n)(default == n) -> ').lower()
+    
+    if repeat == '':
+        repeat = 'n'
     
     if repeat == 'y':
         os.system('clear')
@@ -134,6 +159,7 @@ def main():
         sys.exit()
     else:
         print(color.RED+'Unspecified entry!')
+        sleep(2)
         os.system('clear')
         sys.exit()
     

